@@ -1,0 +1,12 @@
+{% templatetag openblock %} extends "{{ app_name }}/base.html" {% templatetag closeblock %}
+
+{% templatetag openblock %} load i18n {% templatetag closeblock %}
+
+{% templatetag openblock %} block content {% templatetag closeblock %}
+<p>{% templatetag openblock %} blocktrans with escaped_object=object {% templatetag closeblock %}Are you sure you want to delete the {% templatetag closevariable %} object {% templatetag closevariable %} "{% templatetag openvariable %} escaped_object {% templatetag closevariable %}"? {% templatetag openblock %} endblocktrans {% templatetag closeblock %}</p>
+<form action="." method="post">
+{% templatetag openblock %} csrf_token {% templatetag closeblock %}
+<input type="submit" value="{% templatetag openblock %} trans "Yes, I am sure" {% templatetag closeblock %}"/>
+</form>
+<a href="{% templatetag openblock %} url '{{ app_name }}:list' {% templatetag closeblock %}">{% templatetag openblock %} trans "Back" {% templatetag closeblock %}</a>
+{% templatetag openblock %} endblock content {% templatetag closeblock %}

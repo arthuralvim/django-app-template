@@ -1,0 +1,14 @@
+{% templatetag openblock %} extends "{% templatetag openvariable %} app_name {% templatetag closevariable %}/base.html" {% templatetag closeblock %}
+
+{% templatetag openblock %} load i18n {% templatetag closeblock %}
+
+{% templatetag openblock %} block content {% templatetag closeblock %}
+<h2>{% templatetag openvariable %} app_name|title {% templatetag closevariable %} - Create</h2>
+<form action="." method="post">
+{% templatetag openblock %} csrf_token {% templatetag closeblock %}
+    {% templatetag openvariable %} form.as_p {% templatetag closevariable %}
+<input type="submit" value="{% templatetag openblock %} trans "Save" {% templatetag closeblock %}"/>
+</form>
+
+<a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:list' {% templatetag closeblock %}">{% templatetag openblock %} trans "Back" {% templatetag closeblock %}</a>
+{% templatetag openblock %} endblock content {% templatetag closeblock %}

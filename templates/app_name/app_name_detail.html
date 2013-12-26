@@ -1,0 +1,13 @@
+{% templatetag openblock %} extends "{% templatetag openvariable %} app_name {% templatetag closevariable %}/base.html" {% templatetag closeblock %}
+
+{% templatetag openblock %} load i18n {% templatetag closeblock %}
+
+{% templatetag openblock %} block content {% templatetag closeblock %}
+<p>Nome: {% templatetag openvariable %} object.name {% templatetag closevariable %}</p>
+<p>Phone: {% templatetag openvariable %} object.phone {% templatetag closevariable %}</p>
+<p>Description: {% templatetag openvariable %} object.description {% templatetag closevariable %}</p>
+<p>Created_at: {% templatetag openvariable %} object.created_at {% templatetag closevariable %}</p>
+<p>Updated_at: {% templatetag openvariable %} object.updated_at {% templatetag closevariable %}</p>
+
+<a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:list' {% templatetag closeblock %}">{% templatetag openblock %} trans "Back" {% templatetag closeblock %}</a>
+{% templatetag openblock %} endblock content {% templatetag closeblock %}
