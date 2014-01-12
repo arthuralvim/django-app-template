@@ -15,16 +15,16 @@
     <tfoot>
         <tr>
             <td>
-                <a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:create' {% templatetag closeblock %}">{% templatetag openblock %} trans "Add" {% templatetag closeblock %}</a>
+                <a href="{% templatetag openblock %} url '{{ app_name }}:create' {% templatetag closeblock %}">{% templatetag openblock %} trans "Add" {% templatetag closeblock %}</a>
             <td>
         </tr>
     </tfoot>
 <tbody>
     {% templatetag openblock %} for object in object_list {% templatetag closeblock %}
         <tr>
-            <td><a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:detail' object.pk {% templatetag closeblock %}">{% templatetag openvariable %} object {% templatetag closevariable %}</a></td>
-            <td><a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:delete' object.pk {% templatetag closeblock %}">here</a></td>
-            <td><a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:update' object.pk {% templatetag closeblock %}">here</a></td>
+            <td><a href="{% templatetag openblock %} url '{{ app_name }}:detail' object.pk {% templatetag closeblock %}">{% templatetag openvariable %} object {% templatetag closevariable %}</a></td>
+            <td><a href="{% templatetag openblock %} url '{{ app_name }}:delete' object.pk {% templatetag closeblock %}">here</a></td>
+            <td><a href="{% templatetag openblock %} url '{{ app_name }}:update' object.pk {% templatetag closeblock %}">here</a></td>
         </tr>
     {% templatetag openblock %} empty {% templatetag closeblock %}
     {% templatetag openblock %} trans "Nothings here!" {% templatetag closeblock %}

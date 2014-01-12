@@ -5,5 +5,5 @@
 {% templatetag openblock %} block content {% templatetag closeblock %}
 <p>{% templatetag openvariable %} object {% templatetag closevariable %}</p>
 
-<a href="{% templatetag openblock %} url '{% templatetag openvariable %} app_name {% templatetag closevariable %}:list' {% templatetag closeblock %}">{% templatetag openblock %} trans "Back" {% templatetag closeblock %}</a>
+<a href="{% templatetag openblock %} url '{{ app_name }}:list' {% templatetag closeblock %}">{% templatetag openblock %} trans "Back" {% templatetag closeblock %}</a>
 {% templatetag openblock %} endblock content {% templatetag closeblock %}
