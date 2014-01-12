@@ -10,7 +10,7 @@ class {{ app_name|title }}Admin(admin.ModelAdmin):
                     'example_datetimefield', )
     list_display_links = ['example_charfield', ]
     list_filter = ['example_booleanfield', ]
-    prepopulated_fields = {'slug': ('example_charfield',)}
+    prepopulated_fields = {'example_slugfield': ('example_charfield',)}
     search_fields = ['example_charfield', 'example_textfield', ]
     ordering = ('example_charfield',)
 

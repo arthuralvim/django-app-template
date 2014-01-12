@@ -23,10 +23,6 @@ class {{ app_name|title }}(models.Model):
     #     validators: A list of validators to run for this field. See the validators documentation for more information.
     #     verbose_name: A human-readable name for the field. If the verbose name isn’t given, Django will automatically create it using the field’s attribute name, converting underscores to spaces. See Verbose field names.
 
-    example_autofield = models.AutoField(
-        verbose_name=_(u'example_autofield'),
-        blank=False,
-        null=False, )
     example_binaryfield = models.BinaryField(
         verbose_name=_(u'example_binaryfield'),
         blank=False,
@@ -59,8 +55,7 @@ class {{ app_name|title }}(models.Model):
     example_booleanfield = models.BooleanField(
         verbose_name=_(u'example_booleanfield'),
         default=False,
-        blank=True,
-        null=True, )
+        blank=True, )
     example_nullbooleanfield = models.NullBooleanField(
         verbose_name=_(u'example_nullbooleanfield'),
         default=False,
@@ -120,7 +115,6 @@ class {{ app_name|title }}(models.Model):
     example_imagefield = models.FileField(
         verbose_name=_(u'example_imagefield'),
         upload_to='images-upload-path',
-        height_field=None, width_field=None,
         blank=True,
         null=True, )
 
@@ -131,8 +125,8 @@ class {{ app_name|title }}(models.Model):
         return reverse_lazy('{{ app_name }}:detail', kwargs={'pk': self.pk})
 
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.name)
+        if not self.example_slugfield:
+            self.example_slugfield = slugify(self.example_charfield)
         super({{ app_name|title }}, self).save(*args, **kwargs)
 
     class Meta:
