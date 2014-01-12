@@ -7,23 +7,30 @@ Similar to django-boot-template (https://github.com/arthuralvim/django-boot-temp
 Usage
 =====
 
-.. code-block:: console
+You can build it directly:
 
-    django-admin.py startapp --template=url
+    django-admin.py startapp --template=https://github.com/arthuralvim/django-app-template/archive/master.zip --extension=py,html APPNAME
+
+or you can download it and pass the template path:
+
+    git clone git@github.com:arthuralvim/django-app-template.git
+    django-admin.py startapp --template=path/to/django-app-template/ --extension=py,html APPNAME
 
 License
 =====
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
- Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+Version 2, December 2004
 
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
+Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document, and changing it is allowed as long
+as the name is changed.
 
-  0. You just DO WHAT THE FUCK YOU WANT TO.
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+0. You just DO WHAT THE FUCK YOU WANT TO.

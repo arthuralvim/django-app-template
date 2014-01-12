@@ -6,7 +6,8 @@ from {{ app_name }}.models import {{ app_name|title }}
 
 class {{ app_name|title }}Admin(admin.ModelAdmin):
     date_hierarchy = 'example_datetimefield'
-    list_display = ('example_charfield', 'example_textfield', 'example_datetimefield', )
+    list_display = ('example_charfield', 'example_textfield',
+                    'example_datetimefield', )
     list_display_links = ['example_charfield', ]
     list_filter = ['example_booleanfield', ]
     prepopulated_fields = {'slug': ('example_charfield',)}

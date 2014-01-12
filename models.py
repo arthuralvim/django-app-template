@@ -51,7 +51,7 @@ class {{ app_name|title }}(models.Model):
         blank=False,
         null=False, )
     example_slugfield = models.SlugField(
-        verbose_name=_(u'example_slugfield')
+        verbose_name=_(u'example_slugfield'),
         max_length=255,
         default='',
         blank=True,
@@ -128,7 +128,7 @@ class {{ app_name|title }}(models.Model):
         return self.example_charfield
 
     def get_absolute_url(self):
-        return reverse_lazy('{{ app_name }}:detail', kwargs={'pk' : self.pk })
+        return reverse_lazy('{{ app_name }}:detail', kwargs={'pk': self.pk})
 
     def save(self, *args, **kwargs):
         if not self.slug:
@@ -138,4 +138,3 @@ class {{ app_name|title }}(models.Model):
     class Meta:
         verbose_name = _(u'{{ app_name }}')
         verbose_name_plural = _(u'{{ app_name }}s')
-

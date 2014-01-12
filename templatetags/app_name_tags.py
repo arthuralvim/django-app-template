@@ -3,6 +3,7 @@
 from django import template
 register = template.Library()
 
+
 @register.filter
 def is_not_none(arg):
     """
