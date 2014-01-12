@@ -16,6 +16,20 @@ or you can download it and pass the template path:
     git clone git@github.com:arthuralvim/django-app-template.git
     django-admin.py startapp --template=path/to/django-app-template/ --extension=py,html APPNAME
 
+then you just have to add it to the Django's INSTALLED_APPS and routing.
+
+Ex:
+
+    INSTALLED_APPS += (
+        'APPNAME',
+    )
+
+and
+
+    urlpatterns += patterns('',
+        url(r'^some_pattern/', include('APPNAME.urls', namespace='some_name')),
+    )
+
 License
 =====
 
