@@ -1,7 +1,7 @@
 django-app-template
 ===================
 
-Similar to django-boot-template (https://github.com/arthuralvim/django-boot-template) but for app templating.
+Similar to django-project-template (https://github.com/arthuralvim/django-project-template) but for app templating.
 
 
 Usage
@@ -35,9 +35,9 @@ License
 
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 
-Version 2, December 2004
+Version 1, January 2014
 
-Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+Copyright (C) 2014 Arthur Alvim <afmalvim@gmail.com>
 
 Everyone is permitted to copy and distribute verbatim or modified
 copies of this license document, and changing it is allowed as long
